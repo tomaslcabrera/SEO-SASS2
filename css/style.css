@@ -257,7 +257,6 @@ body {
                          "menu-item-4 menu-item-5 menu-item-6"
                          "menu-item-7 menu-item-8 menu-item-9";
     gap: 2em;
-    margin-bottom: 2em;
 }
 
 .menu-title {
@@ -275,39 +274,47 @@ body {
 
 .menu-item-1 {
     grid-area: menu-item-1;
+    margin: 0.5em 2em;
 } 
 
 .menu-item-2 {
     grid-area: menu-item-2;
+    margin: 0.5em 2em;
 }
 
 .menu-item-3 {
     grid-area: menu-item-3;
+    margin: 0.5em 2em;
 }
 
 .menu-item-4 {
     grid-area: menu-item-4;
+    margin: 0.5em 2em;
 }
 
 .menu-item-5 {
     grid-area: menu-item-5;
+    margin: 0.5em 2em;
 }
 
 .menu-item-6 {
     grid-area: menu-item-6;
-
+    margin: 0.5em 2em;
 }
 
 .menu-item-7 {
     grid-area: menu-item-7;
+    margin: 0.5em 2em;
 }
 
 .menu-item-8 {
     grid-area: menu-item-8;
+    margin: 0.5em 2em;
 }
 
 .menu-item-9 {
     grid-area: menu-item-9;
+    margin: 0.5em 2em;
 }
 
 .container-elementos {
