@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+}
+
+::-webkit-scrollbar {
+    width: 0.7em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: gold;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* GRID INDEX */
+.contenedor-index {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(3, 1fr) 6em;
+    grid-template-areas: "header"
+                         "main-index"
+                         "main-index"
+                         "main-index"
+                         "footer";                 
+}
+
+/* GRID PRODUCTOS */
+.contenedor-productos {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(4, 1fr) 6em;
+    grid-template-areas: "header"
+                         "mainProductos"
+                         "mainProductos"
+                         "mainProductos"
+                         "mainProductos"
+                         "footer";   
+}
+/* GRID NOSOTROS */
+.contenedor-nosotros {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(2, 1fr) 6em;
+    grid-template-areas: "header"
+                         "contenedor-main-nosotros"
+                         "contenedor-main-nosotros"
+                         "footer";   
+}
+/* GRID SUCURSALES */
+.contenedor-sucursales {
+    display: grid;
+    min-height: 100vh;
+    
+    grid-template-areas: "header"
+                         "contenedor-main-sucursales"
+                         "contenedor-main-sucursales"
+                         "contenedor-main-sucursales"
+                         "footer";   
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(3, 1fr) 6em;
+}
+
+/* HEADER */
+
+.header {
+    height: 4em;
+    width: 100%;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.header-logo-img {
+    height: 3em;
+    width: 3em;
+    margin-right: 3em;
+}
+
+.header-logo-img:hover {
+    transform: rotate(360deg);
+    transition: all 2s;
+}
+
+.nav-bar-list {
+    display: flex;
+    list-style: none;
+}
+
+.nav-bar-litem * {
+    padding-right: 2em;
+    text-decoration: none;
+    color: gold;
+    font-size: large;
+    font-weight: 700;
+}
+
+.nav-bar-litem:hover a {
+    color: red;
+    transition: all 0.3s;
+}
+
+    /* FOOTER */
+
+.footer {
+    height: 6em;
+    width: 100%;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.footer-redes-list {
+    list-style: none;
+    display: flex;
+}
+
+.footer-logo {
+    height: 4em;
+    width: 4em;
+}
+
+.footer-logo:hover {
+    transform: scale(1.15);
+    transition: all 0.7s;
+}
+
+.footer-correo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-correo-img {
+    height: 3em;
+    width: 3em;
+    margin-right: 0.5em;
+    margin-left: 7em; 
+}
+
+.footer-correo-text {
+    color: gold;
+    margin-right: 1em;
+}
+
+.footer-correo-texta {
+    text-decoration: none;
+    color: gold;
+}
+
+.footer-correo-texta:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.footer-redes-litem {
+    padding-right: 0.25em;
+}
+
+.footer-derechos {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 22, 22);
+}
+/* PAGINA INDEX */
+
+.main-index {
+    grid-area: main-index;
+    display: grid;
+    grid-template-rows: repeat(3, 44em);
+    grid-template-columns: 100%;
+    grid-template-areas: "main-section-1"
+                         "main-section-2"
+                         "main-section-3";
+}
+
+.main-section-1 {
+    grid-area: main-section-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section-2 {
+    grid-area: main-section-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section-3 {
+    grid-area: main-section-3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section-img {
+    width: 100%;
+    height: 44em;
+    opacity: 0.9;
+}
+
+.main-img-text {
+    position: absolute;
+    font-weight: 900;
+    font-size: 3em;
+    margin: 0 1em;
+    width: 90%;
+    text-align: center;
+    line-height: 0.8em;
+}
+
+.main-img-text a {
+    text-decoration: none;
+    color: rgb(255, 123, 0);
+} 
+
+.main-img-text:hover {
+    background-color: rgb(0, 0, 0);
+    transform: scale(1.1);
+    transition: all 1.5s;
+}
+
+/* PAGINA PRODUCTOS */
+ 
+.mainProductos {
+    grid-area: mainProductos;
+    display: grid;
+    grid-template-rows: 8em repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu-title menu-title menu-title"
+                         "menu-item-1 menu-item-2 menu-item-3"
+                         "menu-item-4 menu-item-5 menu-item-6"
+                         "menu-item-7 menu-item-8 menu-item-9";
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.menu-title {
+    grid-area: menu-title;
+    font-weight: 800;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: gold;
+}
+
+.menu-item-1 {
+    grid-area: menu-item-1;
+} 
+
+.menu-item-2 {
+    grid-area: menu-item-2;
+}
+
+.menu-item-3 {
+    grid-area: menu-item-3;
+}
+
+.menu-item-4 {
+    grid-area: menu-item-4;
+}
+
+.menu-item-5 {
+    grid-area: menu-item-5;
+}
+
+.menu-item-6 {
+    grid-area: menu-item-6;
+
+}
+
+.menu-item-7 {
+    grid-area: menu-item-7;
+}
+
+.menu-item-8 {
+    grid-area: menu-item-8;
+}
+
+.menu-item-9 {
+    grid-area: menu-item-9;
+}
+
+.container-elementos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.menu-item-img {
+    border-radius: 15px;
+    height: 128px;
+    width: 128px;
+    display: flex;
+}
+
+.btn-agregar {
+    background-color: red;
+    width: 7em;
+    height: 3em;
+    border-radius: 0.5em;
+    font-weight: 800;
+    font-size: large;
+}
+
+.btn-agregar:hover {
+    transform: scale(1.15);
+    background-color: gold;
+}
+
+/* PAGINA NOSOTROS */
+
+.contenedor-main-nosotros {
+    grid-area: contenedor-main-nosotros;
+    display: grid;
+    grid-template-rows: 8em auto;
+    background-image: url(/imagenes/fondonosotros.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor-main-nosotros .title {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    color: black;
+    font-weight: 800;
+    font-size: x-large;
+    text-decoration: solid;
+}
+
+.text-nosotros {
+    margin: 2em 4em;
+    font-weight: 700;
+    color: gold;
+    text-decoration: solid;
+}
+
+/* PAGINA SUCURSALES */
+
+.contenedor-main-sucursales {
+    grid-area: contenedor-main-sucursales;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(/imagenes/bandera-argentina-encima-de-la-hamburguesa-aislada-en-negro-96932091.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sucursales-title {
+    height: 8em;
+    background-color: gold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    text-decoration: solid;
+}
+
+.contenedor-mapas {
+    color: gold;
+    font-weight: bolder;
+    font-size: large;
+    text-decoration: solid;
+    margin-bottom: 2em;
+}
+
+.maps {
+    border-radius: 15px;
+}
+
+
+/* PAGINA GIFTCARD */
+
+/* Media Queries */
+
+@media only screen and (max-width:900px) {
+    .main-img-text {
+        font-size: 3em;
+    }
+    .footer-correo-img {
+        margin-right: 0.5em;
+        margin-left: 1em; 
+        display: no;
+    }
+    .footer-logo {
+        height: 2.5em;
+        width: 2.5em;
+        margin-right: 1em;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    
+    .mainProductos {
+        grid-area: mainProductos;
+        display: grid;
+        grid-template-rows: 8em repeat(5, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "menu-title menu-title"
+                             "menu-item-1 menu-item-2"
+                             "menu-item-3 menu-item-4"
+                             "menu-item-5 menu-item-6"
+                             "menu-item-7 menu-item-8"
+                             "menu-item-9 menu-item-9";
+        gap: 2em;
+    }
+
+    .header-logo-img {
+        width: 2.5em;
+        height: 2.5em;
+        margin-top: 0.5em;
+    }
+
+    .main-img-text {
+        font-size: 1.6em;
+    }
+    .footer-correo-img {
+        margin-right: 0.5em;
+        margin-left: 1em;
+        height: 2.5em;
+        width: 2.5em; 
+    }
+
+    .footer-correo-text {
+        font-size: .75em;
+        font-weight: 900;
+    }
+
+    .nav-bar-litem *{
+        font-size: small;
+    }
+    .footer-logo {
+        height: 2.5em;
+        width: 2.5em;
+        margin-right: 0.5em;
+    }
+
+    .footer-redes-img {
+        width: 2.5em;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    
+    .mainProductos {
+        grid-area: mainProductos;
+        display: grid;
+        grid-template-rows: 8em repeat(8, 1fr);
+        grid-template-columns: 100%;
+        grid-template-areas: "menu-title"
+                             "menu-item-1"
+                             "menu-item-2"
+                             "menu-item-3"
+                             "menu-item-4"
+                             "menu-item-5"
+                             "menu-item-6"
+                             "menu-item-7"
+                             "menu-item-8"
+                             "menu-item-9";
+        gap: 2em;
+    }
+
+
+    .header-logo-img {
+        width: 2em;
+        height: 2em;
+        margin-left: 0.5em;
+    }
+
+    .nav-bar-litem *{
+        font-size: x-small;
+    }
+
+    .footer-correo-text {
+        font-size: .5em;
+        font-weight: 900;
+        line-height: 2em;
+        margin-left: 1em;
+    }
+
+    .footer-correo-img {
+        display: none;
+    }
+
+    .footer-logo {
+        height: 2em;
+        width: 2em;
+        margin-right: 0.5em;
+    }
+
+    .footer-redes-img {
+        width: 2em;
+    }
+}
