@@ -53,30 +53,6 @@ body {
                          "mainProductos"
                          "footer";   
 }
-/* GRID NOSOTROS */
-.contenedor-nosotros {
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns: 100%;
-    grid-template-rows: 4em repeat(2, 1fr) 6em;
-    grid-template-areas: "header"
-                         "contenedor-main-nosotros"
-                         "contenedor-main-nosotros"
-                         "footer";   
-}
-/* GRID SUCURSALES */
-.contenedor-sucursales {
-    display: grid;
-    min-height: 100vh;
-    
-    grid-template-areas: "header"
-                         "contenedor-main-sucursales"
-                         "contenedor-main-sucursales"
-                         "contenedor-main-sucursales"
-                         "footer";   
-    grid-template-columns: 100%;
-    grid-template-rows: 4em repeat(3, 1fr) 6em;
-}
 
 /* HEADER */
 
@@ -352,75 +328,6 @@ body {
     transform: scale(1.15);
     background-color: gold;
 }
-
-/* PAGINA NOSOTROS */
-
-.contenedor-main-nosotros {
-    grid-area: contenedor-main-nosotros;
-    display: grid;
-    grid-template-rows: 8em auto;
-    background-image: url(/imagenes/fondonosotros.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.contenedor-main-nosotros .title {
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: gold;
-    color: black;
-    font-weight: 800;
-    font-size: x-large;
-    text-decoration: solid;
-}
-
-.text-nosotros {
-    margin: 2em 4em;
-    font-weight: 700;
-    color: gold;
-    text-decoration: solid;
-}
-
-/* PAGINA SUCURSALES */
-
-.contenedor-main-sucursales {
-    grid-area: contenedor-main-sucursales;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url(/imagenes/bandera-argentina-encima-de-la-hamburguesa-aislada-en-negro-96932091.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.sucursales-title {
-    height: 8em;
-    background-color: gold;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
-    text-decoration: solid;
-}
-
-.contenedor-mapas {
-    color: gold;
-    font-weight: bolder;
-    font-size: large;
-    text-decoration: solid;
-    margin-bottom: 2em;
-}
-
-.maps {
-    border-radius: 15px;
-}
-
-
-/* PAGINA GIFTCARD */
 
 /* Media Queries */
 
