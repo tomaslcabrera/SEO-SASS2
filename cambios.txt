@@ -1,0 +1,5 @@
+Para mejorar el SEO agregue e hice lo siguiente:
+Anadidas keywords: "Hamburguesa,Hamburguesa Doble,Hamburguesa Triple,Cheddar,Dambo,Hamburguesería,Giftcard,Tucuman,CABA,Cordoba,Dia de la Hamburguesa,Palta,Guacamole,Bacon,Yerba Buena,Nueva Cordoba,Palermo"
+Anadidos Titulos con la etique Meta, cada uno distinto al otro
+Anadidas descripciones para cada html, cada una explicando el uso
+Gran mayoria de imagenes png convertidas a webp

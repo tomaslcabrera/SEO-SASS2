@@ -1,0 +1,256 @@
+@import 'base/listas';
+@import 'base/mixins';
+@import 'base/extends';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    background-color: nth($colores,6);
+}
+
+::-webkit-scrollbar{
+    width: 0.7em;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background: nth($colores, 2);
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: nth($colores, 3);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover{
+    background: #555;
+  }
+
+  @import 'components/header';
+
+  @import 'components/footer';
+
+  @import 'components/index';
+
+  @import 'components/productos';
+
+  @import 'components/mainSucursales';
+
+  @import 'components/nosotros';
+
+  @import 'components/giftcard';
+
+
+// @media only screen and (max-width:900px) {
+//   .main-img-text {
+//       font-size: 3em;
+//   }
+//   .footer-correo-img {
+//       margin-right: 0.5em;
+//       margin-left: 1em; 
+//       display: no;
+//   }
+//   .footer-logo {
+//       height: 2.5em;
+//       width: 2.5em;
+//       margin-right: 1em;
+//   }
+//   /* Sucursales 900 */
+//   .maps {
+//       height: 25rem;
+//       width: 30rem;
+//   }
+// }
+
+// @media only screen and (max-width:640px) {
+  
+//   .mainProductos{
+//       grid-area: mainProductos;
+//       display: grid;
+//       grid-template-rows: 8em repeat(5, 1fr);
+//       grid-template-columns: repeat(2, 1fr);
+//       grid-template-areas: "menu-title menu-title"
+//                            "menu-item-1 menu-item-2"
+//                            "menu-item-3 menu-item-4"
+//                            "menu-item-5 menu-item-6"
+//                            "menu-item-7 menu-item-8"
+//                            "menu-item-9 menu-item-9";
+//       gap: 2em;
+//   }
+//   .header-logo-img{
+//       width: 2.5em;
+//       height: 2.5em;
+//       margin-top: 0.5em;
+//   }
+//   .main-img-text{
+//       font-size: 1.6em;
+//   }
+
+//   .footer-correo-text{
+//       font-size: .75em;
+//       font-weight: 900;
+//   }
+
+//   .nav-bar-litem *{
+//       font-size: small;
+//   }
+
+//   .footer{
+//     .footer-logo{
+//       height: 2.5em;
+//       width: 2.5em;
+//       margin-right: 0.5em;
+//     }
+//     .footer-correo{
+//         .footer-correo-img{
+//           margin-right: 0.5em;
+//         margin-left: 1em;
+//         height: 2.5em;
+//         width: 2.5em; 
+//         }
+//         .footer-correo-text{
+//           font-size: .75em;
+//           font-weight: 900;
+//         }
+//     }
+//     .footer-redes{
+//         .footer-redes-list{
+//             list-style: none;
+//             display: flex;
+//             .footer-redes-litem{
+//                 padding-right: 0.25em;
+//             }
+//         }
+//     }
+// }
+//   /* Media Sucursales */
+//   .contenedor-main-sucursales{
+//       background-size: contain;
+//   }
+//   .sucursales-title{
+//       height: 5em;
+//   }
+//   .maps{
+//       height: 20rem;
+//       width: 25rem;
+//   }
+//   /* Nosotros 600 */
+//   .title{
+//       height: 5em;
+//   }
+//   .title h2{
+//       font-size: xx-large;
+//   }
+//   /* Giftcard 600 */
+//   .contenedor-giftcard-main{
+//       grid-area: contenedor-giftcard-main;
+//       min-height: 100vh;
+//       display: grid;
+//       grid-template-rows: 4em repeat(3, 1fr);
+//       grid-template-columns: repeat(2, 1fr);
+//       grid-template-areas: 
+//       "menu-title menu-title"
+//       "container-gift-1 container-gift-2"
+//       "container-gift-4 container-gift-3" 
+//       "container-gift-5 container-gift-6";
+//       gap: 1em;
+//       margin-bottom: 1em;
+//   }
+//   .menu-title{
+//       height: 4em;
+//       font-size: x-large;
+//   }
+// }
+
+// @media only screen and (max-width:430px) {
+  
+//   .mainProductos{
+//       grid-area: mainProductos;
+//       display: grid;
+//       grid-template-rows: 8em repeat(8, 1fr);
+//       grid-template-columns: 100%;
+//       grid-template-areas: "menu-title"
+//                            "menu-item-1"
+//                            "menu-item-2"
+//                            "menu-item-3"
+//                            "menu-item-4"
+//                            "menu-item-5"
+//                            "menu-item-6"
+//                            "menu-item-7"
+//                            "menu-item-8"
+//                            "menu-item-9";
+//       gap: 2em;
+//   }
+//   .header-logo-img{
+//       width: 2em;
+//       height: 2em;
+//       margin-left: 0.5em;
+//   }
+
+//   .nav-bar-litem *{
+//       font-size: x-small;
+//   }
+
+//   .footer-correo-text{
+//       font-size: .5em;
+//       font-weight: 900;
+//       line-height: 2em;
+//       margin-left: 1em;
+//       margin-right: 0;
+//   }
+
+//   .footer-correo-img{
+//       display: none;
+//   }
+
+//   .footer-logo{
+//       height: 2em;
+//       width: 2em;
+//       margin: 0 0.5em;
+//   }
+
+//   .footer-redes-img{
+//       width: 2em;
+//   }
+
+//   /* Sucursales 420 */
+//   .sucursales-title{
+//       height: 4em;
+//       font-size: small;
+//   }
+//   .maps{
+//       height: 12rem;
+//       width: 15rem;
+//   }
+
+//   /* Nosotros 400 */
+//   .title{
+//       height: 4em;
+//   }
+//   .title h2{
+//       font-size: x-large;
+//   }
+//   /* Giftcard 400 */
+//   /* Giftcard 600 */
+//   .contenedor-giftcard-main{
+//       grid-template-rows: 4em repeat(6, 1fr);
+//       grid-template-columns: 100%;
+//       grid-template-areas: 
+//       "menu-title"
+//       "container-gift-1" 
+//       "container-gift-2"
+//       "container-gift-3" 
+//       "container-gift-4" 
+//       "container-gift-5" 
+//       "container-gift-6";
+//   }
+//   .menu-title{
+//       height: 4em;
+//       font-size: large;
+//   }
+// }

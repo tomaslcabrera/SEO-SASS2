@@ -1,0 +1,111 @@
+@import '../base/listas';
+
+@import '../base/extends';
+
+@import '../base/mixins';
+/* PAGINA GIFTCARD */
+
+.contenedor-giftcard {
+    grid-template-columns: 100%;
+    grid-template-rows: 4em 3fr 6em 3em;
+    grid-template-areas: "header"
+                         "contenedor-giftcard-main"
+                         "footer"
+                         "footer-derechos";
+                         .contenedor-giftcard-main{
+                            grid-area: contenedor-giftcard-main;
+                            min-height: 100vh;
+                            display: grid;
+                            grid-template-rows: 6em repeat(2, 1fr);
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-template-areas: "menu-title menu-title menu-title"
+                                                 "container-gift-1 container-gift-2 container-gift-3"
+                                                 "container-gift-4 container-gift-5 container-gift-6";
+                            gap: 1.5em;
+                            @include media-down(md){
+                                grid-template-rows: 6em repeat(3, 1fr);
+                                grid-template-columns: repeat(2, 1fr);
+                                grid-template-areas: "menu-title menu-title"
+                                                     "container-gift-1 container-gift-2"
+                                                     "container-gift-3 container-gift-4"
+                                                     "container-gift-5 container-gift-6";
+                                                }
+                            @include media-down(sm){
+                                grid-template-rows: 6em repeat(6, 1fr);
+                                grid-template-columns: 100%;
+                                grid-template-areas: "menu-title"
+                                                     "container-gift-1"
+                                                     "container-gift-2"
+                                                     "container-gift-3"
+                                                     "container-gift-4"
+                                                     "container-gift-5"
+                                                     "container-gift-6";
+                                                } 
+                            margin-bottom: 1em;
+                            .menu-title{
+                                grid-area: menu-title;
+                                height: 4.4em;
+                                @extend %dflex;
+                                @include varios(xx-large,800,normal,sans-serif);
+                                color: nth($colores,3);
+                                background-color: nth($colores,2);
+                                @include media-down(md){
+                                    font-size: x-large;
+                                }
+                                @include media-down(sm){
+                                    font-size: large;
+                                } 
+                            }
+                            .container-gift-1{
+                                grid-area: container-gift-1;
+                                margin: 0.5em 2em;
+                                @extend %dflex;
+                                flex-direction: column;
+                            }                            
+                            .container-gift-2{
+                                grid-area: container-gift-2;
+                                margin: 0.5em 2em;
+                                @extend %dflex;
+                                flex-direction: column;
+                            }                           
+                            .container-gift-3{ 
+                                grid-area: container-gift-3;
+                                margin: 0.5em 2em;
+                                @extend %dflex;
+                                flex-direction: column;
+                            }                                                        
+                            .container-gift-4{
+                                grid-area: container-gift-4;
+                                margin: 0.5em 2em;
+                                @extend %dflex;
+                                flex-direction: column;
+                            }                    
+                            .container-gift-5{
+                                grid-area: container-gift-5;
+                                margin: 0.5em 2em;
+                                @extend %dflex;
+                                flex-direction: column;
+                            }                                                         
+                            .container-gift-6{
+                                grid-area: container-gift-6;
+                                margin: 0.5em 2em;
+                                @extend %dflex;
+                                flex-direction: column;
+                            }
+                            .gift-img {
+                                width: 8em;
+                                height: 8em;
+                            }
+                            .btn-agregar{
+                                background-color: nth($colores,1);
+                                    width: 7em;
+                                    height: 3em;
+                                    border-radius: 0.5em;
+                                    @include varios(large,800,normal,sans-serif);
+                                    &:hover{
+                                        transform: scale(1.15);
+                                        background-color: nth($colores,2);
+                                    }
+                            }
+                        }
+}

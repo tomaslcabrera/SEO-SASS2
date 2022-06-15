@@ -1,0 +1,76 @@
+@import '../base/listas';
+
+@import '../base/extends';
+/* Sucursales*/
+
+.contenedor-sucursales{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(3, 1fr) 6em 3em;
+    grid-template-areas: "header"
+                         "contenedor-main-sucursales"
+                         "contenedor-main-sucursales"
+                         "contenedor-main-sucursales"
+                         "footer"
+                         "footer-derechos";
+                         
+                            .contenedor-main-sucursales{
+                                grid-area: contenedor-main-sucursales;
+                                @extend %dflex;
+                                flex-direction: column;
+                                background: rgba(0,0,0,0.6) url(/imagenes/bandera-argentina-encima-de-la-hamburguesa-aislada-en-negro-96932091.webp);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position-x: center;
+                                background-blend-mode: darken;
+                                .sucursales-title{
+                                    height: 8em;
+                                    background-color: nth($colores, 2);
+                                    width: 100%;
+                                    @extend %dflex;
+                                    font-weight: 800;
+                                    text-decoration: solid;
+                                    font-size: large;
+                                    @include media-down(md){
+                                        font-size: small;
+                                    }
+                                    @include media-down(sm){
+                                        font-size: x-small;
+                                    } 
+                                }
+                                .contenedor-mapas{
+                                    color: nth($colores, 2);
+                                    @include varios(large,bolder,normal,sans-serif);
+                                    text-decoration: solid;
+                                    margin-bottom: 2em;
+                                    margin-top: 2em;
+                                    text-align: center;                                   
+                                    .maps{
+                                        border-radius: 15px;
+                                        border: 0.2em nth($colores, 1) solid;
+                                        height: 25rem;
+                                        width: 40rem;
+                                        margin: 1.5em 0;
+                                        @include media-down(md){
+                                            height: 20rem;
+                                            width: 25rem;
+                                        }
+                                        @include media-down(sm){
+                                            height: 15rem;
+                                            width: 17rem;
+                                        } 
+                                    }
+                                    .title-maps{
+                                        font-size: xx-large;
+                                        @include media-down(md){
+                                            font-size: x-large;
+                                        }
+                                        @include media-down(sm){
+                                            font-size: large;
+                                        } 
+                                    }
+                                }
+                            }
+                         
+}

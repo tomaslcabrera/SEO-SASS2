@@ -1,0 +1,49 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* NOSOTROS */
+
+.contenedor-nosotros{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(2, 1fr) 6em 3em;
+    grid-template-areas: "header"
+                         "contenedor-main-nosotros"
+                         "contenedor-main-nosotros"
+                         "footer"
+                         "footer-derechos";
+                         .contenedor-main-nosotros{
+                            grid-area: contenedor-main-nosotros;
+                            display: grid;
+                            grid-template-rows: 8em auto;
+                            background: rgba(0, 0, 0, 0.7) url(/imagenes/fondonosotros.webp);
+                            background-position: center;
+                            background-size: cover;
+                            background-blend-mode: darken;
+                            .title{
+                                grid-row: 1/2;
+                                @extend %dflex;
+                                background-color: nth($colores,2);
+                                color: black;
+                                font-weight: 800;
+                                font-size: x-large;
+                                text-decoration: solid;
+                                @include media-down(md){
+                                    font-size: large;
+                                }
+                                @include media-down(sm){
+                                    font-size: medium;
+                                } 
+                            }
+                            .text-nosotros{
+                                margin: 0 4em;
+                                font-weight: 700;
+                                color: nth($colores,2);
+                                text-decoration: solid;
+                                margin: 2em;
+                                text-align: center;
+                            }
+                        }
+
+}

@@ -1,0 +1,50 @@
+@import '../base/listas';
+@import '../base/mixins';
+@import '../base/extends';
+/*HEADER*/
+.header {
+    height: 4em;
+    width: 100%;
+    grid-area: header;
+    @extend %dflex;
+    background-color: nth($colores, 3);
+    .header-logo-img {
+        height: 3em;
+        width: 3em;
+        margin-right: 1em;
+        @include media-down(md){
+            height: 2.7em;
+            width: 2.7em;
+        }
+        @include media-down(sm){
+            height: 2.5em;
+            width: 2.5em;
+        }  
+        &:hover {
+            transform: rotate(360deg);
+            transition: all 2s;
+        }
+    }
+    .nav-bar{
+        .nav-bar-list{
+            display: flex;
+            list-style: none;
+            .nav-bar-litem *{
+                padding-right: 0.5em;
+                text-decoration: none;
+                color: nth($colores, 2);
+                @include varios(large,700,normal,sans-serif);
+                @include media-down(md){
+                    @include varios(medium,700,normal,sans-serif)
+                }
+                @include media-down(sm){
+                    @include varios(x-small,700,normal,sans-serif)
+                }  
+            }
+            .nav-bar-litem:hover a{
+                color: nth($colores, 1);
+                transition: all 0.3s;
+            }
+        }
+    }
+}

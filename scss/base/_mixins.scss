@@ -1,0 +1,15 @@
+@mixin varios ($font-size, $font-weight, $font-style, $font-family) {
+    font: $font-style $font-weight $font-size $font-family;
+  }
+
+  $breakpoints: (
+    sm: 540px,
+    md: 768px,
+    lg: 1024px,
+);
+
+@mixin media-down($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+      @content;
+    }
+}

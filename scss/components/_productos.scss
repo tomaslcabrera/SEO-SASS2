@@ -1,0 +1,134 @@
+@import '../base/listas';
+@import '../base/mixins';
+@import '../base/extends';
+
+/* PAGINA PRODUCTOS */
+
+.contenedor-productos{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 4em repeat(4, 1fr) 6em 3em;
+    grid-template-areas: "header"
+                         "mainProductos"
+                         "mainProductos"
+                         "mainProductos"
+                         "mainProductos"
+                         "footer"
+                         "footer-derechos";
+                         .mainProductos{
+                            grid-area: mainProductos;
+                            display: grid;
+                            grid-template-rows: 10em repeat(3, 1fr);
+                            grid-template-columns: repeat(3, 1fr);
+                            grid-template-areas: "menu-title menu-title menu-title"
+                                                 "menu-item-1 menu-item-2 menu-item-3"
+                                                 "menu-item-4 menu-item-5 menu-item-6"
+                                                 "menu-item-7 menu-item-8 menu-item-9";
+                                                 margin-bottom: 1em;
+                            @include media-down(md){
+                                grid-template-rows: 8em repeat(5, 1fr);
+                                grid-template-columns: repeat(2, 1fr);
+                                grid-template-areas: "menu-title menu-title"
+                                                     "menu-item-1 menu-item-2"
+                                                     "menu-item-3 menu-item-4"
+                                                     "menu-item-5 menu-item-6"
+                                                     "menu-item-7 menu-item-8"
+                                                     "menu-item-9  menu-item-9";
+                            }
+                            @include media-down(sm){
+                                grid-template-rows: 6em repeat(9, 1fr);
+                                grid-template-columns: 100%;
+                                grid-template-areas: "menu-title"
+                                                     "menu-item-1" 
+                                                     "menu-item-2"
+                                                     "menu-item-3"
+                                                     "menu-item-4" 
+                                                     "menu-item-5" 
+                                                     "menu-item-6"
+                                                     "menu-item-7" 
+                                                     "menu-item-8" 
+                                                     "menu-item-9";
+                            } 
+                            background: nth($colores,6);                          
+                            .menu-title{
+                                grid-area: menu-title;
+                                height: 4.5em;
+                                width: 100%;
+                                @extend %dflex;
+                                @include varios(xx-large,800,normal,sans-serif);
+                                color: nth($colores,3);
+                                background-color: nth($colores,2);      
+                                @include media-down(md){
+                                    font-size: x-large;
+                                }
+                                @include media-down(sm){
+                                    font-size: large;
+                                }                          
+                            }
+                            .menu-item-1{
+                                grid-area: menu-item-1;
+                                margin: 0.5em 1em;
+                            }                            
+                            .menu-item-2{
+                                grid-area: menu-item-2;
+                                margin: 0.5em 2em;
+                            }                            
+                            .menu-item-3{
+                                grid-area: menu-item-3;
+                                margin: 0.5em 2em;
+                            }                            
+                            .menu-item-4{
+                                grid-area: menu-item-4;
+                                margin: 0.5em 2em;
+                            }                            
+                            .menu-item-5{
+                                grid-area: menu-item-5;
+                                margin: 0.5em 2em;
+                            }                           
+                            .menu-item-6{
+                                grid-area: menu-item-6;
+                                margin: 0.5em 2em;
+                            }                           
+                            .menu-item-7{
+                                grid-area: menu-item-7;
+                                margin: 0.5em 2em;
+                            }                           
+                            .menu-item-8{
+                                grid-area: menu-item-8;
+                                margin: 0.5em 2em;
+                            }                           
+                            .menu-item-9{
+                                grid-area: menu-item-9;
+                                margin: 0.5em 2em;
+                            }
+                            .container-elementos{
+                                @extend %dflex;
+                                flex-direction: column;
+                                text-align: center;
+                                .info-producto{
+                                    @extend %dflex;
+                                    flex-direction: column;
+                                    font-weight: 600;
+                                }
+                                .menu-item-img{
+                                    border-radius: 15px;
+                                    height: 128px;
+                                    width: 128px;
+                                    display: flex;
+                                }
+                                .btn-agregar{
+                                    background-color: nth($colores,1);
+                                    width: 7em;
+                                    height: 3em;
+                                    border-radius: 0.5em;
+                                    font-weight: 800;
+                                    font-size: large;
+                                    &:hover{
+                                        transform: scale(1.15);
+                                        background-color: nth($colores,2);
+                                    }
+                                }
+                            }
+                        }   
+}
